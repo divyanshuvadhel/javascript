@@ -1,0 +1,4 @@
+{
+	"github.copilot.completions.chat.enabled": true,
+	"chat.implicitContext.suggestedContext": false
+}
