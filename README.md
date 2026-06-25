@@ -1,4 +1,5 @@
-> # 1. PHASE 1.
+> # 1. PHASE 1. 
+	BASIC: HISTORY , ARCHITECHTURE ,CONDITION AND LOOPS 
 
 - [NOTES](./notes/note.md)
 
