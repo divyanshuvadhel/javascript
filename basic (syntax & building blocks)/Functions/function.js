@@ -122,5 +122,7 @@ result(20);// it will print 30
 -- memoization /caching 
 --stat handlers  */
 
+// function a(a){
 
+// }
 
