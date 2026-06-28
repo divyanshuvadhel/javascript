@@ -126,3 +126,20 @@ result(20);// it will print 30
 
 // }
 
+let count=0;
+
+function counter(){
+
+	return function (){
+	 count++;
+	}	
+}
+
+const cout=counter();
+console.log(count);
+
+cout();
+console.log(count);
+
+
+
