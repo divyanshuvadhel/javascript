@@ -25,6 +25,10 @@ const B=["a","b","c"];
 
 
 // other mathod to create arr 
-Array.of()//static method for variable arguments
-Array.from()// use to create array from the array like objects
+// Array.of()//static method for variable arguments
+// Array.from()// use to create array from the array like objects
 
+let a=[];
+// // a[0]=10;
+// // a[100]=20
+// console.log(a.length);
