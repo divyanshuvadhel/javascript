@@ -5,6 +5,14 @@
 
 const arr=[1,23,4];
 
+function modi(array){
+		array[0]="hellow";
+}
+
+modi(arr);
+console.log(arr);// it is modifying the original object 
+
+
 arr.push("push");// it return the new length of arrr
 // console.log(arr);
 
