@@ -10,5 +10,9 @@
  >  3. [THIS IN JS](./phase2/This.md)
  >  4. [HIGHER ORDER FUNCTIONS](./phase2/Higher-order-functions.md)
 
+> ## phase 3:
+ >  1. [SELECTION & MANUPILATION](./phase3/selecting&manupilation.md)
+ 
+
 
 

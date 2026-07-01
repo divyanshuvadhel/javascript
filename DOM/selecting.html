@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM Selection & Manipulation Practice</title>
+	<style>
+		/* Simple styles so you can see your DOM changes clearly */
+		body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
+		.highlight { background-color: yellow; font-weight: bold; }
+		.active { color: blue; text-decoration: underline; }
+		#card-container { border: 2px dashed #ccc; padding: 15px; margin-top: 15px; }
+		.card { background: #f4f4f4; padding: 10px; margin: 5px 0; border-radius: 4px; }
+	</style>
+</head>
+<body>
+
+	<header>
+		<!-- Fixed: Wrapped list items inside a semantic UL tag -->
+		<nav id="navigation">
+			<ul class="nav-list">
+				<li class="nav-item">Home</li>
+				<li class="nav-item">About</li>
+				<li class="nav-item">Contact Us</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="intro">
+			<h1 id="main-heading">Welcome to DOM Practice</h1>
+			<p class="description text-muted">This paragraph is here for you to select, change text, or toggle classes.</p>
+			<p class="description">This is a second description paragraph to practice selecting multiple elements.</p>
+		</section>
+
+		<section id="interactive-zone">
+			<h2>Interactive Elements</h2>
+			<!-- Great for practicing attributes and value tracking -->
+			<input type="text" id="username-input" placeholder="Type something here...">
+			<button id="action-btn" disabled>Click Me</button>
+		</section>
+
+		<section id="dynamic-zone">
+			<h2>Dynamic Content</h2>
+			<p>Use JS to append new elements inside the container below:</p>
+			<!-- Empty container to practice creating and inserting elements -->
+			<div id="card-container">jlakjlkj;l</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 JS DOM Learning Journey</p>
+	</footer>
+
+	<!-- Your script file linkage remains exactly the same -->
+	<script src="./selecting.js"></script>
+</body>
+</html>
