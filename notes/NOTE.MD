@@ -12,7 +12,7 @@
 
 > ## phase 3:
  >  1. [SELECTION & MANUPILATION](./phase3/selecting&manupilation.md)
- 
+ >  2. [EVENT HENDLING](./phase3/eventHendling.md)
 
 
 
