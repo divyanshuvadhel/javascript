@@ -110,3 +110,9 @@ function bound(name){
 const x=new bound("nmae")
 
 
+this.a=10;
+
+function addintion(b){
+  console.log(this);
+}
+
