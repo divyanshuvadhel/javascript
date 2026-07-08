@@ -16,7 +16,8 @@
 
 > ## phase 4:
  >  1. [Callbacks](./phase4/callbacks.md)
- >  2. [EVENT HENDLING](./phase3/eventHendling.md)
+ >  2. [PROMISES](./phase4/promises.md)
+ 
 
 
 
