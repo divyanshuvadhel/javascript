@@ -24,7 +24,7 @@ function fetchUser(userId) {
     // 1 sec deely to get the data from the server
 
     setTimeout(() => {
-      if (userId > 0 && userId===1) {
+      if (userId > 0 && userId === 1) {
         const data = {
           userid: 1,
           name: "Alex Johnson",
@@ -32,9 +32,9 @@ function fetchUser(userId) {
           isActive: true,
         };
         resolve(data);
-      }else{
-				reject(new Error("invalaind Input userId"))
-			}
+      } else {
+        reject(new Error("invalaind Input userId"))
+      }
     }, 2000);
   });
 }
@@ -46,14 +46,14 @@ function fetchUser(userId) {
 // async funvtionl or .then
 
 async function fetData() {
-		try {
-		console.log("fettching ...");
-		const data=await fetchUser(1);
-		 console.log(data);
-		 			
-		} catch (error) {
-				console.log(error);
-		}
+  try {
+    console.log("fettching ...");
+    const data = await fetchUser(1);
+    console.log(data);
+
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // fetData();
@@ -66,19 +66,19 @@ async function fetData() {
 
 console.log("A");
 new Promise((resolve) => {
-    console.log("B");
-    resolve("C");
+  console.log("B");
+  resolve("C");
 })
-.then(value => console.log(value));
+  .then(value => console.log(value));
 console.log("D");
 
 
 function getTopPost() {
-    return fetch('/api/posts')
-        .then(res => res.json())
-        .then(posts => posts[0])
-        .then(post => fetch(`/api/posts/${post.id}/comments`))
-        .then(res => res.json());
+  return fetch('/api/posts')
+    .then(res => res.json())
+    .then(posts => posts[0])
+    .then(post => fetch(`/api/posts/${post.id}/comments`))
+    .then(res => res.json());
 }
 
 
@@ -86,11 +86,11 @@ function getTopPost() {
 
 // async function getTop
 async function getPost() {
-  const response=await fetch('/api/posts');
-	const resTojson= await response.json();
-	const data=  resTojson[0];
-	return data;  
-	// return fetch('/api/posts')
+  const response = await fetch('/api/posts');
+  const resTojson = await response.json();
+  const data = resTojson[0];
+  return data;
+  // return fetch('/api/posts')
   //       .then(res => res.json())
   //       .then(posts => posts[0])
   //       .then(post => fetch(`/api/posts/${post.id}/comments`))
@@ -100,14 +100,64 @@ async function getPost() {
 // Write a function that fetches user data,
 //  but if it fails, returns a default user after 1 retry.
 
-async function getUserData(){
-	  try {
-			// max tries are 2 if first will faild then return defualt user 
-				const user=await fetch('api/user')
-				const data= await user.json();
-				return data;
-		} catch (error) {
-				console.log(error);
-			 return {defult:{user:0,name:guest}}
-		}
+async function getUserData() {
+  try {
+    // max tries are 2 if first will faild then return defualt user 
+    const user = await fetch('api/user')
+    const data = await user.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return { defult: { user: 0, name: guest } }
+  }
 }
+
+async function sleep(milis) {
+  return new Promise((res, rej) => {
+    setTimeout(() => res(1), milis)
+  })
+}
+
+sleep().then(val => console.log(val))
+
+var cancellable = function (fn, args, t) {
+  fn(...args)
+  let timerId = setInterval(() => fn(...args), t);
+  return function cancelFn() {
+    clearInterval(timerId);
+  }
+}
+
+
+var promiseAll = function (tasks) {
+
+  return new Promise((res, rej) => {
+
+
+    const result = [];
+    const complete = 0;
+    const total = tasks.length;
+
+    if (total === 0) {
+      return res([]);
+    }
+
+    tasks.forEach((p, i) => {
+      const promise = p;
+      promise
+        .then(val => {
+          result[i] = val
+          complete++;
+          if (complete === tasks.length) return res(result);
+        })
+        .catch(err =>{
+          result[i]=err;
+          complete++;
+          if (complete === tasks.length) return rej(result);
+        })
+
+    })
+    
+  });
+
+};
