@@ -161,3 +161,32 @@ var promiseAll = function (tasks) {
   });
 
 };
+
+// promise polyfilll
+
+// what does promise do it give use baack the promise like recipet of something 
+
+ function PPormis(){
+    
+   // resolve 
+   // reject 
+    function resolve(value){
+      return value;
+    }
+    function reject(err){
+      // throw new Error(err);
+      return err;
+
+    }
+  
+    return function(){
+       
+    }
+ }
+
+const myPromise01=new Promise((resolve, reject) => {
+    setTimeout(()=>{resolve("hey")},100)
+})
+
+// console.log(myPromise01);
+

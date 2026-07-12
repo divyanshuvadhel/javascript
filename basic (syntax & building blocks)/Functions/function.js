@@ -143,3 +143,34 @@ console.log(count);
 
 
 
+const fibo=function(){
+	const obj={
+		 f1:0,
+	f2:1,
+	cf:0,
+	call:0
+	}
+	return function(){
+		if(obj.call===0){
+			obj.call++;
+			return obj.f1;
+		}
+		if(obj.call===1){
+			obj.call++;
+			return obj.f2
+		}
+		obj.cf=obj.f2+obj.f1;
+		obj.f1=obj.f2;
+		obj.f2=obj.cf;
+		return obj.cf;
+	}
+}
+
+const gen=fibo();
+let ans=gen();
+console.log(gen());
+console.log(gen());
+console.log(gen());
+console.log(gen());
+
+
