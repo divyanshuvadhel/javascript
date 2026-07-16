@@ -17,7 +17,11 @@
 > ## phase 4:
  >  1. [Callbacks](./phase4/callbacks.md)
  >  2. [PROMISES](./phase4/promises.md)
+ >  3. [ASYNC AWAIT](./phase4/asyncAwait.md)
+ >  3. [CLASS AND PROTOTYPES](./phase4/classAndPrototypes.md)
  
-
+## phase 5: 
+> 1. [FETCH / APIS](./phase5/apis.md)
+> 1. [FETCH / APIS](./phase5/fetch/api.md)
 
 
